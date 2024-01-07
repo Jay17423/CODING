@@ -1,0 +1,31 @@
+class Solution {
+//Time complexity O(n)
+//Space complexity O(1)
+
+public:
+    int missingInteger(vector<int>& nums) {
+        int sum=0;
+        
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==nums[0]+i){
+                sum=sum+nums[i];
+            }
+                else
+                    break;
+            
+        }
+    
+        int i;
+        sort(nums.begin(),nums.end());
+            for( i=0;i<nums.size();i++){
+                if(sum==nums[i])
+                    sum=sum+1;
+                    
+        }
+      
+        
+            
+        
+        return sum;
+    }
+};
