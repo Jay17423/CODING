@@ -1,0 +1,18 @@
+// Time complexity O(logn)
+// Space complexity O(1)
+
+int countDigits(int n){
+	int count = 0;
+	int newNum = n;
+	int rem=0;
+	while(newNum>0){
+		rem = newNum%10;
+		if(rem>0){
+                  if (n % rem == 0) {
+                    count++;
+                  }
+                }
+                newNum=newNum/10;
+	}
+	return count;
+	}	
